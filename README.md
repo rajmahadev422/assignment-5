@@ -6,10 +6,16 @@
 npm i 
 npm run dev
 ```
-##
-d -> data,
-l -> loading,
-e -> error
+## Representation
+```js
+{
+  d: data,
+  l: loading,
+  e: error
+}
+
+```
+
 
 ## Hook Code
 
