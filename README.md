@@ -7,8 +7,8 @@ npm i
 npm run dev
 ```
 ##
-d -> data
-l -> loading
+d -> data,
+l -> loading,
 e -> error
 
 ## Hook Code
