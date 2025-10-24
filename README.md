@@ -6,6 +6,11 @@
 npm i 
 npm run dev
 ```
+##
+d -> data
+l -> loading
+e -> error
+
 ## Hook Code
 
 ```js
@@ -13,23 +18,23 @@ import { useState, useEffect } from "react";
 
 function useFetch(url) {
   const [urlData, setUrlData] = useState({
-    data: [],
-    loading: false,
-    error: null,
+    d: [],
+    l: false,
+    e: null,
   });
 
   useEffect(() => {
     const fetchData = async () => {
-      setUrlData({ data: null, loading: true, error: null });
+      setUrlData({ d: null, l: true, e: null });
 
       try {
         const response = await fetch(url);
 
         const products = await response.json();
 
-        setUrlData({ data: [...products], loading: false, error: null });
+        setUrlData({ d: [...products], l: false, e: null });
       } catch (err) {
-        setUrlData({ data: null, loading: false, error: err.message });
+        setUrlData({ d: null, l: false, e: err.message });
       }
     };
     fetchData();
@@ -44,8 +49,8 @@ export default useFetch;
 - return data
 ```
 urlData = {
-  data,
-  loading,
-  error
+  d,
+  l,
+  e
 }
 ```
